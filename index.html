@@ -977,14 +977,50 @@
   .replay-grid { align-items: start; }
   h1, h2 { text-wrap: balance; }
   .section-white h2, .section-peach h2 { color: var(--dsc-primary); }
-  .oct29-opener {
+  .oct29-hook {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: color-mix(in srgb, var(--dsc-text-muted) 55%, var(--dsc-primary-dark) 45%);
+    margin: 0 0 14px;
+    max-width: 40ch;
+  }
+  .oct29-tension {
+    list-style: none;
+    margin: 22px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+  .oct29-tension li {
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,64,99,0.14);
     font-size: var(--fs-base);
-    font-weight: 500;
-    line-height: 1.5;
-    color: color-mix(in srgb, var(--dsc-text-muted) 60%, var(--dsc-primary-dark) 40%);
-    margin: 0 0 20px;
-    max-width: 52ch;
-    text-wrap: pretty;
+    line-height: 1.45;
+    color: var(--dsc-text-muted);
+  }
+  .oct29-tension li:last-child { border-bottom: 1px solid rgba(0,64,99,0.14); }
+  .oct29-question {
+    margin: 22px 0 0;
+    font-size: var(--fs-lead);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--dsc-primary-dark);
+    max-width: 46ch;
+  }
+  .oct29-proof-strip {
+    margin-top: clamp(32px, 4vw, 48px);
+    padding-top: clamp(24px, 3vw, 32px);
+    border-top: 1px solid rgba(0,64,99,0.12);
+    display: grid;
+    gap: 10px;
+  }
+  .oct29-proof-strip p {
+    margin: 0;
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    color: var(--dsc-text-muted);
+    max-width: 90ch;
   }
   .hero-copy-top .eyebrow {
     display: inline-flex;
@@ -1295,10 +1331,17 @@
 <section class="section section-white hero">
   <div class="container hero-grid">
     <div class="hero-copy-top">
-      <p class="oct29-opener">You practice outside insurance, or you are about to. Every decision is now yours. What to charge. What goes in the contract. How a surgical specialty runs without a payer. Where patients come from when nobody can look you up. And there is no one down the hall to ask.</p>
-      <p class="eyebrow">Free live hour. Thursday, October 29. 3:00 PM PT / 5:00 PM CT / 6:00 PM ET.</p>
-      <h1>Your Contract Is Running Your Practice</h1>
-      <p class="lead">Two foot and ankle surgeons who left every third-party contract, nine years apart, on how to build a direct specialty care practice on purpose.</p>
+      <p class="oct29-hook">Everyone said the window had closed.</p>
+      <p class="eyebrow">Free live hour. Thursday, October 29. 3:00 PM PT / 5:00 PM CT / 6:00 PM ET. 100 seats in the live room.</p>
+      <h1>13 Years Without an Insurance Contract: How She Did It, and How You Can</h1>
+      <p class="lead">Dr. Grace Torres-Hodges, foot and ankle surgeon, Pensacola. No name for the model, no directory, nobody who had gone first, and Medicare out too. On October 29 she walks you through year one, the mistakes, and the practice that is still hers.</p>
+      <ul class="oct29-tension">
+        <li>A surgical specialty, in a model built for monthly memberships.</li>
+        <li>A geriatric patient base, and she opted out of Medicare anyway.</li>
+        <li>No fee schedule to price against. No colleague to call.</li>
+        <li>Every reason to fail that you have been given.</li>
+      </ul>
+      <p class="oct29-question">What did year one actually cost, and how did she get from there to here?</p>
     </div>
     <div class="call-window" aria-hidden="true">
       <div class="call-header">
@@ -1371,9 +1414,13 @@
       </div>
     </div>
     <div class="hero-copy-bottom">
-      <a href="#register" class="btn btn-navy">Register, first month free</a>
-      <p class="oct29-hero-note">The live hour is open to any physician. Registering also claims your first month of DSC Alliance membership free: your directory listing so patients can find you, the Starter Guide, the full webinar library, and a private community of specialists who answer each other honestly.</p>
+      <a href="#register" class="btn btn-navy">Save your seat</a>
+      <p class="oct29-hero-note">Organized by the DSC Alliance, the physician-led community for specialists who practice outside insurance. The live hour is open to any physician. The recording joins the member library afterward, with the Starter Guide, the national directory, and a private room of specialists who answer each other honestly.</p>
     </div>
+  </div>
+  <div class="container oct29-proof-strip">
+    <p>Walk through the fire once. Practice on your terms for years. Two books, one an Independent Press Award winner. She co-leads the Florida chapter of the Free Market Medical Association. Residents from six programs learn from her. The Wall Street Journal and NPR call her for comment.</p>
+    <p>Hosted by Dr. Tea Nguyen, DPM, DSC Alliance co-founder, who made the same move in 2022 and asks what she wishes someone had told her.</p>
   </div>
 </section>
 <section class="oct29-flush section section-white">
@@ -1401,7 +1448,7 @@
         <li>What each of them would do differently from year one.</li>
       </ul>
       <p class="oct29-presenters-close">Then your questions, live, until we run out of time.</p>
-      <a href="#register" class="btn btn-navy">Register, first month free</a>
+      <a href="#register" class="btn btn-navy">Save your seat</a>
     </div>
   </div>
 </section>
@@ -1474,8 +1521,8 @@
         <p>The DSC Alliance exists so that no specialist has to start from zero again.</p>
         <p>In 2013 Grace had no term to search, no directory, no alliance. In 2022 Tea had the beginnings of one, and helped build the rest. This hour is the two of them, in the same room, so the next specialist starts further along than either of them did.</p>
         <p>Her own words for it: burnout, when shared, becomes the structural protection for the next generation.</p>
-        <a href="#register" class="btn btn-peach">Register, first month free</a>
-        <p class="oct29-whyrun-note">Registering also claims your first month of membership free: directory listing, Starter Guide, webinar library, community.</p>
+        <a href="#register" class="btn btn-peach">Save your seat</a>
+        <p class="oct29-whyrun-note">100 seats in the live room. The recording joins the member library afterward, with the Starter Guide, the national directory, and a private room of specialists who answer each other honestly.</p>
       </div>
     </div>
   </div>
@@ -1489,7 +1536,7 @@
       <ul class="register-points">
         <li><span class="takeaway-mark">&#10003;</span>Free to attend, open to any physician</li>
         <li><span class="takeaway-mark">&#10003;</span>They answer questions until we run out of time</li>
-        <li><span class="takeaway-mark">&#10003;</span>Registering also claims your first month of DSC Alliance membership free</li>
+        <li><span class="takeaway-mark">&#10003;</span>100 seats in the live room</li>
       </ul>
       <p class="oct29-question-hint">On the form: "What is the one question you want answered on October 29? We put the best ones to Grace and Tea first."</p>
     </div>
@@ -1540,14 +1587,13 @@
         </div>
         <div class="r-row">
           <span class="r-key">Cost</span>
-          <span class="r-val">Free<span>First month of membership free too.</span></span>
+          <span class="r-val">Free<span>No card required.</span></span>
         </div>
       </div>
     </div>
     <div class="form-embed">
       <div style="min-height:640px;border:2px dashed rgba(0,64,99,.35);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px;font:600 18px/1.5 Manrope,sans-serif;color:#004063;background:#f6f9fb">Registration form goes here.<br>Preview only: this page does not register anyone.</div>
     </div>
-    
   </div>
 </section>
 <section class="oct29-flush section section-white faq-anchor">
@@ -1560,7 +1606,7 @@
       </details>
       <details class="faq-item">
         <summary><span>Is it free?</span><span class="faq-icon" aria-hidden="true"></span></summary>
-        <div class="faq-answer"><p style="margin:0;">Yes, the live hour is free for any physician interested in direct care.</p></div>
+        <div class="faq-answer"><p style="margin:0;">Yes, the live hour is free for any physician interested in direct care. The live room holds 100.</p></div>
       </details>
       <details class="faq-item">
         <summary><span>Can I send a question in advance?</span><span class="faq-icon" aria-hidden="true"></span></summary>
