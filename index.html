@@ -1008,20 +1008,23 @@
     color: var(--dsc-primary-dark);
     max-width: 46ch;
   }
-  .oct29-proof-strip {
-    margin-top: clamp(32px, 4vw, 48px);
-    padding-top: clamp(24px, 3vw, 32px);
-    border-top: 1px solid rgba(0,64,99,0.12);
-    display: grid;
-    gap: 10px;
+  .oct29-proof {
+    margin: 22px 0 0;
+    font-size: var(--fs-md);
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--dsc-primary-dark);
+    max-width: 46ch;
   }
-  .oct29-proof-strip p {
-    margin: 0;
+  .oct29-host {
+    margin: 10px 0 0;
     font-size: var(--fs-sm);
     line-height: 1.6;
     color: var(--dsc-text-muted);
-    max-width: 90ch;
+    max-width: 52ch;
   }
+  .hero .lead + .oct29-question { margin-top: 10px; }
+  .oct29-question + .oct29-tension { margin-top: 22px; }
   .hero-copy-top .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -1328,20 +1331,154 @@
     <img src="https://dscalliance.org/wp-content/uploads/2026/02/dsc-alliance-new-1-291x300.png" alt="DSC Alliance" width="109" height="112">
   </div>
 </header>
+<style>
+  .hero-copy-top h1 { font-size: clamp(34px, 2.4vw + 11px, 46px); line-height: 1.28; }
+  .hero-copy-top h1 em::before { top: -4px; bottom: -4px; }
+  .hero .hero-copy-top .lead { font-size: var(--fs-md); }
+</style>
+<style>
+  .hero-grid { row-gap: 36px; }
+  .oct29-g + .oct29-g { margin-top: 36px; }
+  .hero-copy-top .eyebrow { margin: 0 0 22px; border-radius: 14px; line-height: 1.5; }
+  .oct29-g-title .oct29-hook {
+    margin: 0 0 18px; 
+    font-size: var(--fs-lead);
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--dsc-primary);
+    max-width: none;
+  }
+  .oct29-g-title h1 { margin: 0; }
+  .hero .oct29-g-title .lead {
+    margin: 16px 0 0;
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--dsc-text-muted);
+  }
+  .oct29-g-argument .oct29-question {
+    margin: 0;
+    font-size: var(--fs-lead);
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.4;
+    color: var(--dsc-primary-dark);
+    max-width: 34ch;
+  }
+  .oct29-g-argument .oct29-tension { margin: 12px 0 0; gap: 4px; }
+  .oct29-g-argument .oct29-tension li,
+  .oct29-g-argument .oct29-tension li:last-child {
+    padding: 0;
+    border: 0;
+    font-size: var(--fs-base);
+    line-height: 1.55;
+    color: var(--dsc-text-muted);
+  }
+  .oct29-g-people .oct29-proof { margin: 0; font-size: var(--fs-md); font-weight: 700; }
+  .oct29-g-people .oct29-host { margin: 8px 0 0; max-width: 54ch; text-wrap: pretty; }
+  .hero-copy-bottom .oct29-hero-note { margin-top: 14px; }
+</style>
+<style>
+  .oct29-g-title .oct29-hook { margin-top: 0; }
+  .oct29-when {
+    margin: 0 0 22px;
+    padding: 18px 22px;
+    background: var(--dsc-accent);
+    border-radius: 14px;
+    color: var(--dsc-primary-dark);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.55;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .oct29-when span { display: block; }
+  .oct29-when span:nth-child(2) { font-size: var(--fs-md); letter-spacing: 0.03em; }
+  .oct29-when span:first-child { font-size: var(--fs-caption); letter-spacing: 0.1em; margin-bottom: 4px; opacity: .8; }
+  .hero-copy-bottom .oct29-hero-note { font-size: var(--fs-caption); line-height: 1.55; max-width: 48ch; }
+</style>
+<style>
+  .oct29-g-argument .oct29-question {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    line-height: 1.45;
+    max-width: none;
+    text-wrap: balance; 
+  }
+  .oct29-g-argument .oct29-tension { margin-top: 8px; gap: 0; }
+  .oct29-g-argument .oct29-tension li,
+  .oct29-g-argument .oct29-tension li:last-child {
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+  }
+</style>
+<style>
+</style>
+<style>
+  .oct29-cta-row { display: flex; align-items: stretch; gap: 12px; }
+  .oct29-cta-row .oct29-when { margin: 0; display: flex; flex-direction: column; justify-content: center; }
+  .oct29-seat-btn.btn {
+    flex: 0 0 auto;
+    aspect-ratio: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 28px;
+    border-radius: 14px;
+    width: auto; 
+    white-space: nowrap;
+    min-width: 0;
+    line-height: 1.25;
+    font-size: var(--fs-md);
+  }
+  @media (max-width: 560px) {
+    .oct29-cta-row { flex-direction: column; }
+    .oct29-cta-row .oct29-when { width: 100%; }
+    .oct29-seat-btn.btn { width: 100%; padding: 18px 22px; }
+    .oct29-cta-row .oct29-when { min-height: 0; }
+  }
+</style>
+<style>
+  .oct29-when-label {
+    margin: 0 0 10px;
+    font-size: var(--fs-caption);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dsc-primary);
+  }
+  .oct29-when span:first-child { font-size: var(--fs-md); letter-spacing: 0.03em; margin-bottom: 2px; opacity: 1; }
+  .oct29-cta-row .oct29-when { padding: 14px 22px; }
+  .oct29-when span:nth-child(2) { font-size: var(--fs-sm); letter-spacing: 0.04em; white-space: nowrap; }
+</style>
+<style>
+  .oct29-cta-row { gap: 10px; }
+  .oct29-cta-row .oct29-when { padding: 12px 18px; letter-spacing: 0.01em; }
+  .oct29-when span:first-child { letter-spacing: 0.01em; }
+  .oct29-when span:nth-child(2) { letter-spacing: 0.01em; font-size: var(--fs-caption); }
+  .oct29-seat-btn.btn { padding: 12px 22px; }
+</style>
 <section class="section section-white hero">
   <div class="container hero-grid">
     <div class="hero-copy-top">
-      <p class="oct29-hook">Everyone said the window had closed.</p>
-      <p class="eyebrow">Free live hour. Thursday, October 29. 3:00 PM PT / 5:00 PM CT / 6:00 PM ET. 100 seats in the live room.</p>
-      <h1>13 Years Without an Insurance Contract: How She Did It, and How You Can</h1>
-      <p class="lead">Dr. Grace Torres-Hodges, foot and ankle surgeon, Pensacola. No name for the model, no directory, nobody who had gone first, and Medicare out too. On October 29 she walks you through year one, the mistakes, and the practice that is still hers.</p>
-      <ul class="oct29-tension">
-        <li>A surgical specialty, in a model built for monthly memberships.</li>
-        <li>A geriatric patient base, and she opted out of Medicare anyway.</li>
-        <li>No fee schedule to price against. No colleague to call.</li>
-        <li>Every reason to fail that you have been given.</li>
-      </ul>
-      <p class="oct29-question">What did year one actually cost, and how did she get from there to here?</p>
+      <div class="oct29-g oct29-g-title">
+        <p class="oct29-hook">Everyone said the window had closed.</p>
+        <h1><em>13 Years</em> Without an Insurance Contract: How She Did It, and How You Can</h1>
+        <p class="lead">Dr. Grace Torres-Hodges, foot and ankle surgeon, Pensacola.</p>
+      </div>
+      <div class="oct29-g oct29-g-argument">
+        <p class="oct29-question">What did year one actually cost, and how did she get from there to here?</p>
+        <ul class="oct29-tension">
+          <li>A surgical specialty, in a model built for monthly memberships.</li>
+          <li>Every reason to fail that you have been given.</li>
+        </ul>
+      </div>
+      <div class="oct29-g oct29-g-people">
+        <p class="oct29-proof">Walk through the fire once. Practice on your terms for years.</p>
+        <p class="oct29-host">Hosted by Dr. Tea Nguyen, DPM, DSC Alliance co-founder, who made the same move in 2022 and asks what she wishes someone had told her.</p>
+      </div>
     </div>
     <div class="call-window" aria-hidden="true">
       <div class="call-header">
@@ -1414,13 +1551,13 @@
       </div>
     </div>
     <div class="hero-copy-bottom">
-      <a href="#register" class="btn btn-navy">Save your seat</a>
-      <p class="oct29-hero-note">Organized by the DSC Alliance, the physician-led community for specialists who practice outside insurance. The live hour is open to any physician. The recording joins the member library afterward, with the Starter Guide, the national directory, and a private room of specialists who answer each other honestly.</p>
+      <p class="oct29-when-label">Free live hour. </p>
+      <div class="oct29-cta-row">
+        <p class="oct29-when"><span>Thursday, October 29. </span><span>3:00 PM PT / 5:00 PM CT / 6:00 PM ET.</span></p>
+        <a href="#register" class="btn btn-navy oct29-seat-btn">Save your seat</a>
+      </div>
+      <p class="oct29-hero-note">Organized by the DSC Alliance, the physician-led community for specialists who practice outside insurance.</p>
     </div>
-  </div>
-  <div class="container oct29-proof-strip">
-    <p>Walk through the fire once. Practice on your terms for years. Two books, one an Independent Press Award winner. She co-leads the Florida chapter of the Free Market Medical Association. Residents from six programs learn from her. The Wall Street Journal and NPR call her for comment.</p>
-    <p>Hosted by Dr. Tea Nguyen, DPM, DSC Alliance co-founder, who made the same move in 2022 and asks what she wishes someone had told her.</p>
   </div>
 </section>
 <section class="oct29-flush section section-white">
@@ -1522,7 +1659,7 @@
         <p>In 2013 Grace had no term to search, no directory, no alliance. In 2022 Tea had the beginnings of one, and helped build the rest. This hour is the two of them, in the same room, so the next specialist starts further along than either of them did.</p>
         <p>Her own words for it: burnout, when shared, becomes the structural protection for the next generation.</p>
         <a href="#register" class="btn btn-peach">Save your seat</a>
-        <p class="oct29-whyrun-note">100 seats in the live room. The recording joins the member library afterward, with the Starter Guide, the national directory, and a private room of specialists who answer each other honestly.</p>
+        <p class="oct29-whyrun-note">The recording joins the member library afterward, with the Starter Guide, the national directory, and a private room of specialists who answer each other honestly.</p>
       </div>
     </div>
   </div>
@@ -1536,7 +1673,6 @@
       <ul class="register-points">
         <li><span class="takeaway-mark">&#10003;</span>Free to attend, open to any physician</li>
         <li><span class="takeaway-mark">&#10003;</span>They answer questions until we run out of time</li>
-        <li><span class="takeaway-mark">&#10003;</span>100 seats in the live room</li>
       </ul>
       <p class="oct29-question-hint">On the form: "What is the one question you want answered on October 29? We put the best ones to Grace and Tea first."</p>
     </div>
@@ -1606,7 +1742,7 @@
       </details>
       <details class="faq-item">
         <summary><span>Is it free?</span><span class="faq-icon" aria-hidden="true"></span></summary>
-        <div class="faq-answer"><p style="margin:0;">Yes, the live hour is free for any physician interested in direct care. The live room holds 100.</p></div>
+        <div class="faq-answer"><p style="margin:0;">Yes, the live hour is free for any physician interested in direct care.</p></div>
       </details>
       <details class="faq-item">
         <summary><span>Can I send a question in advance?</span><span class="faq-icon" aria-hidden="true"></span></summary>
